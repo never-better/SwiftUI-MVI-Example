@@ -13,9 +13,10 @@ class HomeIntent {
     // MARK: - Model
     
     private weak var model: HomeModelActionsProtocol?
+    private weak var routeModel: HomeModelRouterProtocol?
     
     // MARK: - Services
-
+    
     private let networkService: NetworkServiceProtocol
     
     // MARK: - Business Data
@@ -23,11 +24,12 @@ class HomeIntent {
     private let externalData: HomeTypes.Intent.ExternalData
     private var contents: [GroupChat] = [] // Model에서 데이터를 가지는데 중복해서 가질 이유가 있을까?
     
-    init(model: HomeModelActionsProtocol,
+    init(model: HomeModelActionsProtocol & HomeModelRouterProtocol,
          networkService: NetworkServiceProtocol,
          externalData: HomeTypes.Intent.ExternalData
     ) {
         self.model = model
+        self.routeModel = model
         self.networkService = networkService
         self.externalData = externalData
     }
@@ -51,9 +53,12 @@ extension HomeIntent: HomeIntentProtocol {
             }
             
         }
-        // network로 데이터 받아오기
+        
     }
     
+    func onTapListItems(state: DetailView.StateViewModel) {
+        routeModel?.routeToDetail(content: state)
+    }
 }
 
 // MARK: - Helper classes

@@ -17,16 +17,19 @@ struct HomeView: View {
     
     var body: some View {
         
-        ZStack {
-            switch state.contentState {
-            case .loading:
-                LoadingView(text: state.loadingText)
-            case let .content(groupChat):
-                HomeList(intent: intent, listRowItem: groupChat)
+        NavigationView {
+            ZStack {
+                switch state.contentState {
+                case .loading:
+                    LoadingView(text: state.loadingText)
+                        .onAppear { intent.viewOnAppear() }
+                case let .content(groupChat):
+                    HomeList(intent: intent, listRowItem: groupChat)
+                }
             }
+            .navigationTitle(state.navigationTitle)
+            .modifier(HomeRouter(subjects: state.routerSubject, intent: intent))
         }
-        .navigationTitle(state.navigationTitle)
-        .onAppear { intent.viewOnAppear() }
     }
 }
 
@@ -55,9 +58,14 @@ private extension HomeView {
                 
                 LazyVStack(spacing: 16) {
                     
-                    ForEach(listRowItem, id: \.self) {
-                        HomeListRowView(state: $0)
+                    ForEach(listRowItem, id: \.self) { item in
+                        HomeListRowView(state: item)
                             .padding()
+                            .onTapGesture {
+                                intent.onTapListItems(state:
+                                    DetailView.StateViewModel(title: item.title, members: item.members)
+                                )
+                            }
                     }
                     
                 }

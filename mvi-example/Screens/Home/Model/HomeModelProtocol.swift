@@ -16,7 +16,7 @@ protocol HomeModelStateProtocol {
     var navigationTitle: String { get }
     
     
-    //  var routerSubject: ListRouter.Subjects { get }
+    var routerSubject: HomeRouter.Subjects { get }
 }
 
 // MARK: - Model Action
@@ -29,5 +29,5 @@ protocol HomeModelActionsProtocol: AnyObject {
 // MARK: - Route
 
 protocol HomeModelRouterProtocol: AnyObject {
-    func routeToDetail(content: GroupChat)
+    func routeToDetail(content: DetailView.StateViewModel)
 }

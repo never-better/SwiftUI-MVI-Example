@@ -9,5 +9,5 @@ import Foundation
 
 protocol HomeIntentProtocol {
     func viewOnAppear()
-//    func onTapListItems(id: String)
+    func onTapListItems(state: DetailView.StateViewModel)
 }

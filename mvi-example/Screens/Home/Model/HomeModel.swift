@@ -15,6 +15,7 @@ final class HomeModel: ObservableObject, HomeModelStateProtocol {
     
     let loadingText: String = "로딩 중"
     let navigationTitle: String = "MVI 예제"
+    let routerSubject = HomeRouter.Subjects()
 }
 
 // MARK: - Action
@@ -34,6 +35,15 @@ extension HomeModel: HomeModelActionsProtocol {
 }
 
 // MARK: - Route 이동
+
+extension HomeModel: HomeModelRouterProtocol {
+    
+    func routeToDetail(content: DetailView.StateViewModel) {
+        routerSubject.screen.send(.detail(state: content)) 
+    }
+}
+
+// MARK: - Helper
 
 extension HomeTypes.Model {
     enum ContentState {

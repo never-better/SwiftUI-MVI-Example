@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145BAC012A5D4D24000B8BB3 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145BAC002A5D4D24000B8BB3 /* RouterProtocol.swift */; };
+		145BAC042A5D4E50000B8BB3 /* RouterAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145BAC032A5D4E50000B8BB3 /* RouterAlertModifier.swift */; };
+		145BAC062A5D4FC9000B8BB3 /* RouterCloseModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145BAC052A5D4FC9000B8BB3 /* RouterCloseModifier.swift */; };
+		145BAC082A5D501F000B8BB3 /* RouterNavigationStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145BAC072A5D501F000B8BB3 /* RouterNavigationStackModifier.swift */; };
+		145BAC0A2A5D509B000B8BB3 /* RouterNavigationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145BAC092A5D509B000B8BB3 /* RouterNavigationViewModifier.swift */; };
+		145BAC0C2A5D5115000B8BB3 /* RouterSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145BAC0B2A5D5115000B8BB3 /* RouterSheetModifier.swift */; };
+		145BAC0F2A5D5140000B8BB3 /* RouterScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145BAC0E2A5D5140000B8BB3 /* RouterScreenProtocol.swift */; };
+		145BAC152A5D6767000B8BB3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145BAC142A5D6767000B8BB3 /* HomeRouter.swift */; };
+		145BAC182A5D6ABE000B8BB3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145BAC172A5D6ABE000B8BB3 /* DetailView.swift */; };
 		14641E812A5D061400AC2445 /* mvi_exampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14641E802A5D061400AC2445 /* mvi_exampleApp.swift */; };
 		14641E832A5D061400AC2445 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14641E822A5D061400AC2445 /* HomeView.swift */; };
 		14641E852A5D061500AC2445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14641E842A5D061500AC2445 /* Assets.xcassets */; };
@@ -27,6 +36,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		145BAC002A5D4D24000B8BB3 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		145BAC032A5D4E50000B8BB3 /* RouterAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterAlertModifier.swift; sourceTree = "<group>"; };
+		145BAC052A5D4FC9000B8BB3 /* RouterCloseModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterCloseModifier.swift; sourceTree = "<group>"; };
+		145BAC072A5D501F000B8BB3 /* RouterNavigationStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterNavigationStackModifier.swift; sourceTree = "<group>"; };
+		145BAC092A5D509B000B8BB3 /* RouterNavigationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterNavigationViewModifier.swift; sourceTree = "<group>"; };
+		145BAC0B2A5D5115000B8BB3 /* RouterSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterSheetModifier.swift; sourceTree = "<group>"; };
+		145BAC0E2A5D5140000B8BB3 /* RouterScreenProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterScreenProtocol.swift; sourceTree = "<group>"; };
+		145BAC142A5D6767000B8BB3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		145BAC172A5D6ABE000B8BB3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		14641E7D2A5D061400AC2445 /* mvi-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvi-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14641E802A5D061400AC2445 /* mvi_exampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvi_exampleApp.swift; sourceTree = "<group>"; };
 		14641E822A5D061400AC2445 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -58,6 +76,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		145BABFF2A5D4BE7000B8BB3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				145BAC022A5D4E44000B8BB3 /* Modifier */,
+				145BAC002A5D4D24000B8BB3 /* RouterProtocol.swift */,
+				145BAC0E2A5D5140000B8BB3 /* RouterScreenProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		145BAC022A5D4E44000B8BB3 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				145BAC032A5D4E50000B8BB3 /* RouterAlertModifier.swift */,
+				145BAC052A5D4FC9000B8BB3 /* RouterCloseModifier.swift */,
+				145BAC072A5D501F000B8BB3 /* RouterNavigationStackModifier.swift */,
+				145BAC092A5D509B000B8BB3 /* RouterNavigationViewModifier.swift */,
+				145BAC0B2A5D5115000B8BB3 /* RouterSheetModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		145BAC162A5D6AB5000B8BB3 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				145BAC172A5D6ABE000B8BB3 /* DetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		14641E742A5D061400AC2445 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +156,7 @@
 		14641E942A5D073C00AC2445 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				145BAC162A5D6AB5000B8BB3 /* Detail */,
 				14641EAD2A5D18A200AC2445 /* Model */,
 				14641E952A5D074000AC2445 /* Home */,
 			);
@@ -165,6 +214,7 @@
 		14641E9E2A5D130700AC2445 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				145BAC142A5D6767000B8BB3 /* HomeRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -172,6 +222,7 @@
 		14641EA22A5D139800AC2445 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				145BABFF2A5D4BE7000B8BB3 /* Router */,
 				14641EA32A5D13A000AC2445 /* MVIContainer.swift */,
 				14641EA52A5D163200AC2445 /* IntentType.swift */,
 			);
@@ -265,11 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145BAC082A5D501F000B8BB3 /* RouterNavigationStackModifier.swift in Sources */,
 				14641EA12A5D133500AC2445 /* HomeIntent.swift in Sources */,
 				14641EAA2A5D17B700AC2445 /* HomeTypes.swift in Sources */,
 				14641EBB2A5D331D00AC2445 /* HomeView+Build.swift in Sources */,
 				14641E932A5D072100AC2445 /* NetworkServiceProtocol.swift in Sources */,
+				145BAC0C2A5D5115000B8BB3 /* RouterSheetModifier.swift in Sources */,
 				14641EAF2A5D18B000AC2445 /* GroupChat.swift in Sources */,
+				145BAC042A5D4E50000B8BB3 /* RouterAlertModifier.swift in Sources */,
 				14641EA82A5D175900AC2445 /* HomeModel.swift in Sources */,
 				14641E832A5D061400AC2445 /* HomeView.swift in Sources */,
 				14641EAC2A5D17EA00AC2445 /* HomeModelProtocol.swift in Sources */,
@@ -277,8 +331,14 @@
 				14641EB22A5D27AA00AC2445 /* HomeIntentProtocol.swift in Sources */,
 				14641E902A5D067700AC2445 /* NetworkService.swift in Sources */,
 				14641E9A2A5D07DC00AC2445 /* HomeListRowView.swift in Sources */,
+				145BAC0A2A5D509B000B8BB3 /* RouterNavigationViewModifier.swift in Sources */,
+				145BAC012A5D4D24000B8BB3 /* RouterProtocol.swift in Sources */,
+				145BAC182A5D6ABE000B8BB3 /* DetailView.swift in Sources */,
+				145BAC0F2A5D5140000B8BB3 /* RouterScreenProtocol.swift in Sources */,
 				14641E812A5D061400AC2445 /* mvi_exampleApp.swift in Sources */,
 				14641EA62A5D163200AC2445 /* IntentType.swift in Sources */,
+				145BAC062A5D4FC9000B8BB3 /* RouterCloseModifier.swift in Sources */,
+				145BAC152A5D6767000B8BB3 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
